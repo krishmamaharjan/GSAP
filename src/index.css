@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Neucha&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-black: #222123;
+  --color-main-bg: #232224;
+  --color-white: #ffffff;
+  --color-dark-brown: #523122;
+  --color-mid-brown: #a26833;
+  --color-light-brown: #e3a458;
+  --color-red-brown: #7f3b2d;
+  --color-yellow-brown: #a26833;
+  --color-milk-yellow: #e3d3bc;
+  --color-herotext: #fce1cd;
+  --color-red: #a02128;
+  --color-milk: #faeade;
+  --font-antonio: "Antonio",sans-serif;
+  --font-paragraph: "Neucha", sans-serif;
+}
+
+@layer components{
+  .hero-container{
+    @apply relative bg-milk w-screen h-dvh overflow-hidden;
+
+    .hero-content{
+      @apply relative z-10 w-full h-full flex flex-col 2xl:justify-center items-center translate-y-10 2xl:pt-0 md:pt-32 pt-24; 
+
+      .hero-title{
+        @apply font-antonio font-bold text-dark-brown 2xl:text-[8.5rem] md:text-[6.5rem] text-[3.3rem] uppercase leading-[9vw] tracking-[-.35vw] 2xl:mb-0 mb-5; 
+      }
+      .hero-text-scroll{
+        @apply rotate-[-3deg] border-[.5vw] border-milk;
+
+        .hero-subtitle{
+          @apply bg-mid-brown;
+        }
+
+        h1{
+          @apply uppercase 2xl:text-[9rem] md:text-[6rem] text-[3rem] font-bold text-herotext leading-[9vw] tracking-[-.35vw] 2xl:px-[1.2vw] px-3 2xl:pb-[1vw];
+        }
+      }
+      h2{
+        @apply font-paragraph text-center text-dark-brown md:max-w-lg max-w-sm px-5 md:text-lg leading-[115%] mt-3;
+      }
+      .hero-button {
+        @apply md:mt-16 mt-10 text-dark-brown bg-light-brown uppercase font-bold font-antonio text-lg rounded-full md:p-5 p-3 md:px-16 px-10;
+      }
+    }
+  }
+}
